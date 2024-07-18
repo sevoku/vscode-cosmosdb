@@ -348,6 +348,11 @@
             },
             {
                 "category": "Cosmos DB",
+                "command": "cosmosDB.openNoSqlQuery",
+                "title": "Open NoSQL Query Editor"
+            },
+            {
+                "category": "Cosmos DB",
                 "command": "cosmosDB.openStoredProcedure",
                 "title": "Open Stored Procedure"
             },
@@ -586,6 +591,11 @@
                 },
                 {
                     "command": "cosmosDB.writeNoSqlQuery",
+                    "when": "view =~ /azure(ResourceGroups|Workspace|FocusView)/ && viewItem == cosmosDBDocumentCollection",
+                    "group": "1@2"
+                },
+                {
+                    "command": "cosmosDB.openNoSqlQuery",
                     "when": "view =~ /azure(ResourceGroups|Workspace|FocusView)/ && viewItem == cosmosDBDocumentCollection",
                     "group": "1@2"
                 },

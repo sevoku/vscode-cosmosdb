@@ -22,6 +22,7 @@ import { deleteDocDBTrigger } from "./commands/deleteDocDBTrigger";
 import { executeDocDBStoredProcedure } from "./commands/executeDocDBStoredProcedure";
 import { executeNoSqlQuery } from "./commands/executeNoSqlQuery";
 import { getNoSqlQueryPlan } from "./commands/getNoSqlQueryPlan";
+import { openNoSqlQuery } from "./commands/openNoSqlQuery";
 import { openStoredProcedure } from "./commands/openStoredProcedure";
 import { openTrigger } from "./commands/openTrigger";
 import { viewDocDBCollectionOffer } from "./commands/viewDocDBCollectionOffer";
@@ -53,6 +54,7 @@ export function registerDocDBCommands(): void {
     // #region Collection command
 
     registerCommandWithTreeNodeUnwrapping('cosmosDB.writeNoSqlQuery', writeNoSqlQuery);
+    registerCommandWithTreeNodeUnwrapping("cosmosDB.openNoSqlQuery", openNoSqlQuery);
     registerCommandWithTreeNodeUnwrapping('cosmosDB.deleteDocDBCollection', deleteDocDBCollection);
     registerCommandWithTreeNodeUnwrapping("cosmosDB.viewDocDBCollectionOffer", viewDocDBCollectionOffer);
 
